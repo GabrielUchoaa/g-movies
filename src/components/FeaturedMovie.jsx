@@ -16,7 +16,7 @@ backgroundImage: `url(https://image.tmdb.org/t/p/original${props.chosenMovie.bac
     <div className="header-info-container">
     <div className="movie-info">
         <div style={{width: "100%", backgroundColor: "", padding:"1em 0", marginTop:"-1em"}}>
-     <span style={{fontSize: "2rem", fontWeight: "500"}}>{props.chosenMovie.title || props.chosenMovie.name}</span>
+     <span >{props.chosenMovie.title || props.chosenMovie.name}</span>
      <div className="featuredM-overview">
         {props.chosenMovie.overview}</div>
      <div className="button">

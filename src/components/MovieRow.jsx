@@ -13,17 +13,20 @@ export default function MovieRow(props){
             <div className="top-slider"><span>{i.title}</span><a href="#">View All</a></div> 
             <Swiper
             spaceBetween={25}
+           
+            
             breakpoints={{
                 1100:{
-                slidesPerView:6,
+                slidesPerView:6.5,
                 spaceBetween: 30
               },
               500:{
-                slidesPerView:4,
+                slidesPerView:4.5,
               },
               0:{
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 10,
+                
               }}}
             className='Swiper' >
             

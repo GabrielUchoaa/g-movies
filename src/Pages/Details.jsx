@@ -117,14 +117,14 @@ backgroundImage: `url(https://image.tmdb.org/t/p/original${info && info.backdrop
             slidesPerView={5}
             breakpoints={{
                 1100:{
-                slidesPerView:6,
+                slidesPerView:6.5,
                 spaceBetween: 40
               },
               500:{
-                slidesPerView:4,
+                slidesPerView:4.5,
               },
               0:{
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 10,
               }}}
             className='Swiper' >

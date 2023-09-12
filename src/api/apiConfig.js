@@ -1,4 +1,3 @@
-import React from "react"
 const API_KEY = '62289db5e694f4a5c9a3617062741344'
 const API_BASE = 'https://api.themoviedb.org/3'
 

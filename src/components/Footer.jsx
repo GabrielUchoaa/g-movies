@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 export default function Footer(){
     return (
         <>
-    <div className="Footer">
+    <div className="Footer" style={{marginTop: "auto"}}>
     <Link to="/" style={{textDecoration: "none"}}>
         <div style={{
          width: "100%", display: "flex", justifyContent: "center", alignItems: "center",

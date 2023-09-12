@@ -13,9 +13,8 @@ from "react-router-dom"
  let router = createBrowserRouter(createRoutesFromElements(
   
   <Route>
- 
-  <Route element={<Layout />}>
      <Route index element={<Home />} ></Route>
+  <Route element={<Layout />}>
      <Route path="/movies" element={<Movies />}></Route>
      <Route path="/series" element={<Series />}></Route>
      <Route path="/details/:id/:tipo" element={<Details />}></Route>

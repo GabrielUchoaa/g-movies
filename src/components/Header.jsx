@@ -38,7 +38,7 @@ let menuopacity_style = {
 
     return (
         <>
-         <div className="header"  style={{backgroundColor: headerColorChanger}}>
+         <div className="header"  style={{backgroundColor: headerColorChanger, top: "0px"}}>
             <div className="menu-opacity" style={menuopacity_style}></div>
          <div className="menu" style={menu_style}>
             <div className="menu-logo">

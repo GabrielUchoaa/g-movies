@@ -165,7 +165,7 @@ nav{
     margin-top: 2em;
     z-index: 0;
     display: flex;
-    flex-wrap: wrap;
+    
     
 }
 
@@ -185,7 +185,7 @@ nav{
     
 }
 
-
+.movie-info span {font-size: 2rem; font-weight: 500;}
 
 @media (max-width: 993px) {
     .movieImg {display: none;}
@@ -193,7 +193,7 @@ nav{
 }
 
 @media (max-width: 668px) {
-    .header-info {font-size: 0.9rem;}
+   
     nav {display: none}
     .FeturedMovie { background: cover; background-position: center center;}
     .hamburger-menu {display: flex;}
@@ -216,11 +216,18 @@ max-height: 11em;
 
 .header-info-container { width: 80%; display: flex}
 
-@media(max-width: 319px){
-    .header-info-container { width: 90%; display: flex;}
-    .header-info {
-        font-size: 0.8rem;}
+@media(max-width: 350px){
+    .header-info { top: 15%; }
+    .movie-info { justify-content: center;}
+    .opacity { height: 87vh;} 
+    .FeturedMovie {height: 87vh;}
+    .buttn:nth-child(2) { margin-left: 1em; }
+    .buttn { font-size: 0.8rem; }
+    .details-name { font-size: 1em; color: blue; }
+    .details-info { margin-top: -2em; }
 }
+
+
 
 
 /* Swiper */
