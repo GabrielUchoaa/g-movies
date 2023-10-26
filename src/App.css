@@ -216,7 +216,7 @@ max-height: 11em;
 
 .header-info-container { width: 80%; display: flex}
 
-@media(max-width: 350px){
+@media(max-width: 425px){
     .header-info { top: 15%; }
     .movie-info { justify-content: center;}
     .opacity { height: 87vh;} 
