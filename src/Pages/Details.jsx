@@ -72,15 +72,15 @@ console.log(similarFiltered)
                         <>
                         <div className="topcasts">
                         <img src={`https://image.tmdb.org/t/p/original${credits.cast[0] &&  credits.cast[0].profile_path }`} alt="" />
-                        <div style={{textAlign: "center"}}>{credits.cast[0] && credits.cast[0].name}</div>
+                        <div className="cast-name" style={{textAlign: "center"}}>{credits.cast[0] && credits.cast[0].name}</div>
                         </div>
                         <div className="topcasts">
                         <img src={`https://image.tmdb.org/t/p/original${credits.cast[1] && credits.cast[1].profile_path}`} alt="" />
-                        <div style={{textAlign: "center"}}>{credits.cast[1] && credits.cast[1].name}</div>
+                        <div className="cast-name" style={{textAlign: "center"}}>{credits.cast[1] && credits.cast[1].name}</div>
                         </div>
                         <div className="topcasts">
                         <img src={`https://image.tmdb.org/t/p/original${credits.cast[2] && credits.cast[2].profile_path}`} alt="" />
-                        <div style={{textAlign: "center"}}>{credits.cast[2] && credits.cast[2].name}</div>
+                        <div className="cast-name" style={{textAlign: "center"}}>{credits.cast[2] && credits.cast[2].name}</div>
                         </div>
                         </>
                         : ""}

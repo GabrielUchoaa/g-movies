@@ -498,6 +498,8 @@ transform: scale(1.1);
     max-width: 100px;
 }
 
+
+
 .details-genre {
     background-color:"";
     display: flex;
@@ -521,6 +523,7 @@ transform: scale(1.1);
 
 
 .details-topCasts {
+    font-size: 1.2rem;
     margin-top: 1.5em;
 }
 
@@ -791,7 +794,7 @@ iframe {
 
 
 
-@media (min-height: 630px) {
+@media (max-width: 500px ) and (min-height: 630px) {
     .header-info {
         font-size: 1.2rem;
 }
@@ -808,6 +811,17 @@ iframe {
     padding: 1em;
 }
 .footer-content div {
+    font-size: 0.8rem;
+}
+
+.detailsOverview{
+    font-size: 1.3em;
+}
+.topcasts img {
+    width: 7em;
+    
+}
+.cast-name {
     font-size: 0.8rem;
 }
 
