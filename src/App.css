@@ -24,7 +24,7 @@ body {
     top: 0;
     width: 100%;
     background: transparent;
-    font-size: 1rem;
+    font-size: 1.0rem;
     padding:0.5em 0;
     z-index: 3;
     
@@ -143,10 +143,11 @@ nav{
 
 
 .buttn {
+    font-size: 2rem;
     text-decoration: none;
     color: white;
     font-weight: 500;
-    padding:0.5em 1.4em;
+    padding:0.7em 1.6em;
     border-radius: 2em;
     border: 1px solid white;
     background-color: rgb(255, 0, 0);
@@ -790,4 +791,10 @@ iframe {
 @media (min-height: 630px) {
     .header-info {
         font-size: 1.2rem;}
+        
+    
+        .header {
+            font-size: 1.1rem;
+            padding:0.5em 0; 
+        }
 }
