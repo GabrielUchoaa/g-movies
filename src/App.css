@@ -147,7 +147,7 @@ nav{
     text-decoration: none;
     color: white;
     font-weight: 500;
-    padding:0.9em 1.9em;
+    padding:0.6em 1.6em;
     border-radius: 2em;
     border: 1px solid white;
     background-color: rgb(255, 0, 0);
@@ -465,15 +465,21 @@ transform: scale(1.1);
 
 /* Detail */
 
+.details-info {
+    font-size: 1rem; 
+    margin-left: 5%; 
+    
+}
+
 .details {
-    font-size: 1rem;
     width: 80%;
     margin: auto;
-    margin-top: 7em;
+    margin-top: 7rem;
     display: flex;
     justify-content: center;
     
 }
+
 
 .details-posterPath {
     width: 17em;
@@ -483,9 +489,6 @@ transform: scale(1.1);
     
 }
 
-.details-info {
-    margin-left: 5%;  
-}
 
 .details-name {
     color: white;
@@ -790,11 +793,22 @@ iframe {
 
 @media (min-height: 630px) {
     .header-info {
-        font-size: 1.2rem;}
-        
-    
+        font-size: 1.2rem;
+}
         .header {
             font-size: 1.1rem;
             padding:0.5em 0; 
         }
+        .buttn {
+    padding:0.9em 1.9em;
+}
+
+.footer-content {
+    width: 20em;
+    padding: 1em;
+}
+.footer-content div {
+    font-size: 0.8rem;
+}
+
 }
