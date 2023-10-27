@@ -185,7 +185,7 @@ nav{
     
 }
 
-.movie-info span {font-size: 2rem; font-weight: 500;}
+.movie-info span {font-size: 2em; font-weight: 500;}
 
 @media (max-width: 993px) {
     .movieImg {display: none;}
@@ -784,3 +784,10 @@ iframe {
     margin-top: 300px;
 }
 
+
+
+
+@media (min-height: 630px) {
+    .header-info {
+        font-size: 1.2rem;}
+}
