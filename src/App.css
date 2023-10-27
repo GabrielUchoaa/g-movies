@@ -815,14 +815,16 @@ iframe {
 }
 
 .detailsOverview{
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 .topcasts img {
-    width: 7em;
+    width: 8em;
     
 }
 .cast-name {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
+
+
 
 }
