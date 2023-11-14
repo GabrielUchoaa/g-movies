@@ -37,7 +37,7 @@ switch(random) {
 let list = await apiConfig.getHomeList(); // [8 aquela lista ] 
 
 let listFiltered = list.map(i => i.items.results.filter(i => 
-  i.backdrop_path !== null && i.poster_path != null && i.overview.length > 250))
+  i.backdrop_path !== null && i.poster_path != null && i.overview.length > 200))
 
 let originals = listFiltered[random][Random];  // filme ou série aleatório {}
 let movieInfo = await apiConfig.getMovieInfo(originals.id, tipo)
