@@ -538,7 +538,7 @@ transform: scale(1.1);
 .cast-area {
     font-size: 0.8rem;
     display: flex;
-    gap: 2em;
+    gap: 2.2em;
     margin-top: 10px;
     
 }
@@ -795,6 +795,8 @@ iframe {
 
 
 @media (max-width: 500px ) and (min-height: 630px) {
+
+
     .header-info {
         font-size: 1.2rem;
 }
@@ -809,9 +811,11 @@ iframe {
 .footer-content {
     width: 20em;
     padding: 1em;
+    font-size: 1.2rem;
 }
 .footer-content div {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding:1.5em 0; 
 }
 
 .detailsOverview{
@@ -827,4 +831,16 @@ iframe {
 
 .details-info { margin-top: 5%;}
 
+
 }
+
+@media (max-width: 384px ) and (min-height: 743px)
+{
+    .footer-content {
+        width: 20em;
+        padding: 1em;
+        
+    }
+}
+
+
