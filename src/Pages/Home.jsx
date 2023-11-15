@@ -47,7 +47,7 @@ let movieInfo = await apiConfig.getMovieInfo(originals.id, tipo)
 
 setChosenMovie(movieInfo);
 setList(list);
-setListFiltered(lç);
+
 
 console.log(movieInfo, listFiltered, list)
 
