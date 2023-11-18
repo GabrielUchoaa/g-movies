@@ -16,7 +16,7 @@ function Home() {
 
 
  
-
+try{ 
 React.useEffect(  () => {
 const loadall = async () => {  
 
@@ -38,31 +38,36 @@ switch(random) {
 
 
 let list = await apiConfig.getHomeList(); 
-let List = list.map(i => i.items.results.filter(i => i.overview.length > 1)) 
+let List = list.map(i => i.items.results.filter(i => 
+  i.backdrop_path !== null && i.poster_path != null && i.overview.length > 50))
 let originals = List[random][Random];  // filme ou série aleatório {}
+let movieInfo = await apiConfig.getMovieInfo(originals.id, tipo)
+
 
 console.log(list, List)
 
 
 
-setChosenMovie(originals);
-setList(list);
+setChosenMovie(movieInfo);
+setList(List);
 
 
 
 }
 loadall()
-}, [])
-
+}, [])}
+catch(error){
+  console.log('eror' + error)
+}
 
 
   return (
     <>
     
-    {chosenMovie.backdrop_path ? <Header/>  : ""} 
-    {chosenMovie.backdrop_path ? <FeaturedMovie chosenMovie={chosenMovie}  />  : ""} 
-    {chosenMovie.backdrop_path ? <MovieRow list={List}  />  : <div className='loadingIcon'><div className="dots-bars-4"></div></div>} 
-    {chosenMovie.backdrop_path ? <Footer/>  : ""} 
+    {chosenMovie && chosenMovie.backdrop_path ? <Header/>  : ""} 
+    {chosenMovie && chosenMovie.backdrop_path ? <FeaturedMovie chosenMovie={chosenMovie}  />  : ""} 
+    {chosenMovie && chosenMovie.backdrop_path ? <MovieRow list={List}  />  : <div className='loadingIcon'><div className="dots-bars-4"></div></div>} 
+    {chosenMovie && chosenMovie.backdrop_path ? <Footer/>  : ""} 
     
     </>
   )

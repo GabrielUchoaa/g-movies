@@ -20,8 +20,6 @@ const [similarFiltered, setSimilarFiltered] = React.useState()
 
 React.useEffect(()=> {
 
-    
-    
     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setInfo(data))
@@ -37,16 +35,14 @@ React.useEffect(()=> {
     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/similar?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setSimilar(data))
-    
-    
 }, [])
 
 React.useEffect(() => {
     setSimilarFiltered(similar && similar.results.filter(i => i.backdrop_path !== null && i.poster_path !== null ))
-
+    console.log(similarFiltered)
 }, [similar])
 
-console.log(similarFiltered)
+
 
 
      return (

@@ -188,9 +188,13 @@ nav{
 
 .movie-info span {font-size: 2em; font-weight: 500;}
 
-@media (max-width: 993px) {
+@media (max-width: 787px) {
     .movieImg {display: none;}
-
+    .mobile_movieInfo {
+        text-align: center;
+    }
+    .button { display: flex; justify-content: center;}
+    .header-info-container { display: flex; justify-content: center;}
 }
 
 @media (max-width: 668px) {
@@ -795,11 +799,7 @@ iframe {
 
 
 @media (max-width: 500px ) and (min-height: 630px) {
-.mobile_movieInfo {
-    text-align: center;
-}
 
-.button { display: flex; justify-content: center; }
 
     .header-info {
         font-size: 1.2rem;
