@@ -795,7 +795,11 @@ iframe {
 
 
 @media (max-width: 500px ) and (min-height: 630px) {
+.mobile_movieInfo {
+    text-align: center;
+}
 
+.button { display: flex; justify-content: center; }
 
     .header-info {
         font-size: 1.2rem;
@@ -841,6 +845,8 @@ iframe {
         padding: 1em;
         
     }
+
+ 
 }
 
 
