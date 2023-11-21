@@ -20,30 +20,29 @@ const [similarFiltered, setSimilarFiltered] = React.useState()
 
 React.useEffect(()=> {
 
-    fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
+     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setInfo(data))
 
-    fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/credits?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
+     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/credits?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setCredits(data))
 
-    fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/videos?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
+     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/videos?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setVideos(data))
 
-    fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/similar?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
+     fetch(`https://api.themoviedb.org/3/${tipo.tipo === "tv" ? "tv" : "movie"}/${movieId.id}/recommendations?language=pt-BR&api_key=62289db5e694f4a5c9a3617062741344`)
     .then(res => res.json())
     .then(data => setSimilar(data))
 }, [])
 
 React.useEffect(() => {
-    setSimilarFiltered(similar && similar.results.filter(i => i.backdrop_path !== null && i.poster_path !== null ))
-    console.log(similarFiltered)
+ setSimilarFiltered(similar && similar.results.filter(i => i.backdrop_path !== null && i.poster_path !== null ))
+    
 }, [similar])
 
-
-
+console.log(similarFiltered)
 
      return (
         <>
@@ -102,10 +101,10 @@ backgroundImage: `url(https://image.tmdb.org/t/p/original${info && info.backdrop
          </iframe>
          </div>
         )) : 
-        <span>Trailers não disponíveis</span>}
+        <span>Trailers are not available</span>}
      </div>
      <div className="similar">
-     <div className="similar-span"><span>Similar</span></div>
+     <div className="similar-span"><span>Recommendations</span></div>
      <div className="swiper" style={{ marginTop: "em"}}>  
             <div className='slider-container'>
             <Swiper
@@ -129,7 +128,7 @@ backgroundImage: `url(https://image.tmdb.org/t/p/original${info && info.backdrop
                  
                  <SwiperSlide className="swiperslide" key={item.id}>
                     
-                    <Link to={`/details/${item.id}/${item.type}`} reloadDocument>
+                    <Link to={`/details/${item.id}/${item.media_type}`} reloadDocument>
                  <img src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} className="slide-img" />
                     </Link>
                     

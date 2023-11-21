@@ -13,10 +13,12 @@ export function loader(){
 function Home() {
  const [chosenMovie, setChosenMovie] = React.useState([]);
  const [List, setList] = React.useState();
+ const [tipo, setTipo] = React.useState();
+
 
 
  
-try{ 
+
 React.useEffect(  () => {
 const loadall = async () => {  
 
@@ -26,7 +28,7 @@ let Random = Math.floor(Math.random() * 20);
 
 let tipo = null;
 switch(random) {
-  case  0:
+  case  0 || 1:
  tipo = 'tv'
  break; 
  default:
@@ -38,36 +40,36 @@ switch(random) {
 
 
 let list = await apiConfig.getHomeList(); 
-let List = list.map(i => i.items.results.filter(i => 
-  i.backdrop_path !== null && i.poster_path != null && i.overview.length > 50))
-let originals = List[random][Random];  // filme ou série aleatório {}
+let movieList = list.map(i => i.items.results.filter(i => i.overview.length > 1))
+
+
+setList(list)
+let originals = movieList[random][Random];  // filme ou série aleatório {}
 let movieInfo = await apiConfig.getMovieInfo(originals.id, tipo)
-
-
-console.log(list, List)
-
-
-
+setTipo(tipo)
 setChosenMovie(movieInfo);
-setList(List);
 
 
+
+
+
+  console.log(originals, tipo, list, movieList)
+
+
+ 
 
 }
 loadall()
-}, [])}
-catch(error){
-  console.log('eror' + error)
-}
+}, [])
 
 
   return (
     <>
     
-    {chosenMovie && chosenMovie.backdrop_path ? <Header/>  : ""} 
-    {chosenMovie && chosenMovie.backdrop_path ? <FeaturedMovie chosenMovie={chosenMovie}  />  : ""} 
-    {chosenMovie && chosenMovie.backdrop_path ? <MovieRow list={List}  />  : <div className='loadingIcon'><div className="dots-bars-4"></div></div>} 
-    {chosenMovie && chosenMovie.backdrop_path ? <Footer/>  : ""} 
+    {chosenMovie.backdrop_path ? <Header/>  : ""} 
+    {chosenMovie.backdrop_path ? <FeaturedMovie chosenMovie={chosenMovie} list={List} tipo={tipo}/>  : ""} 
+    {chosenMovie.backdrop_path ? <MovieRow list={List}  />  : <div className='loadingIcon'><div className="dots-bars-4"></div></div>} 
+    {chosenMovie.backdrop_path ? <Footer/>  : ""} 
     
     </>
   )

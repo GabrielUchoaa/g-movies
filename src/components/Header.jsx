@@ -63,7 +63,7 @@ let menuopacity_style = {
               </Link>
               </div>
            </div>
-           <div className="close" onClick={() => setOpenMenu(prev => !prev)}>Fechar</div>
+           <div className="close" onClick={() => setOpenMenu(prev => !prev)}>Close</div>
          </div>
          <div className="Header" >
             <Link to="/" style={{textDecoration: "none"}}>

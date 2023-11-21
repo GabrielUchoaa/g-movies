@@ -62,7 +62,7 @@ export default function Series(){
       <div className="movies-area">
          {seriesDataFiltered && seriesDataFiltered.length > 2 ?  seriesDataFiltered.map(item => (
                 <div className="movies_img">                
-                <Link to={`/details/${item.id}/${item.type}`} >
+                <Link to={`/details/${item.id}/tv`} >
                 <img src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} className="movies_posterPath"/>
                 </Link>
                    <span style={{display: "block", margin: "auto", marginTop: "13px",
@@ -74,7 +74,7 @@ export default function Series(){
  SeriesArray && SeriesArray.map(i => (
     i.items.results.map(item => (
         <div className="movies_img">                
-        <Link to={`/details/${item.id}/${i.type}`} >
+        <Link to={`/details/${item.id}/tv`} >
         <img src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} className="movies_posterPath"/>
         </Link>
            <span style={{display: "block", margin: "auto", marginTop: "13px",

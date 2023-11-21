@@ -30,7 +30,7 @@ export default function MovieRow(props){
               }}}
             className='Swiper' >
             
-            {i.map(item => (
+            {i.items.results.map(item => (
                  
                  <SwiperSlide className="swiperslide" key={item.id}>
                     <Link to={`/details/${item.id}/${i.type}`} >

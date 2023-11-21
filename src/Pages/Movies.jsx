@@ -66,7 +66,7 @@ load();
       <div className="movies-area">
          {moviesDataFiltered && moviesDataFiltered.length > 2 ?  moviesDataFiltered.map(item => (
                 <div className="movies_img">                
-                <Link to={`/details/${item.id}/${item.type}`} >
+                <Link to={`/details/${item.id}/movie`} >
                 <img src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} className="movies_posterPath"/>
                 </Link>
                    <span style={{display: "block", margin: "auto", marginTop: "13px",

@@ -22,12 +22,12 @@ backgroundImage: `url(https://image.tmdb.org/t/p/original${props.chosenMovie.bac
      <div className="button">
         
         
-        <Link to={`/details/${props.chosenMovie.id}/${props.chosenMovie.type}`} className="buttn">
+        <Link to={`/details/${props.chosenMovie.id}/${props.tipo}`} className="buttn">
         Watch now
         </Link>
         
         
-        <Link to={`/details/${props.chosenMovie.id}/${props.chosenMovie.type}`} className="buttn">
+        <Link to={`/details/${props.chosenMovie.id}/${props.tipo}`} className="buttn">
         Watch trailer
         </Link>
     </div>
