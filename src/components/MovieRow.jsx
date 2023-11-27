@@ -21,7 +21,7 @@ export default function MovieRow(props){
                 spaceBetween: 30
               },
               500:{
-                slidesPerView:4.5,
+                slidesPerView:3.5,
               },
               0:{
                 slidesPerView: 1.5,

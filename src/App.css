@@ -53,7 +53,7 @@ body {
 nav{
     display: flex;
     justify-content: space-between;
-    width: 18em;
+    width: 33%;
     margin-left: auto;
 }
 
@@ -132,8 +132,6 @@ nav{
 }
 
 .movieImg {
-    
- 
     width: 18em;
     margin-left: 8em;
     border-radius: 1em;
@@ -327,9 +325,9 @@ transform: scale(1.1);
 
 .footer {
     width: 100vw;
-    height: 50vh;
+    padding: 7.8em;
     background-size: cover;
-    
+    z-index: 1;
     
 }
 
@@ -337,7 +335,6 @@ transform: scale(1.1);
     position: absolute;
     z-index: 1;
     width: 100vw;
-    height: 50vh;
     background-color: rgba(0, 0, 0, 0.8);
     
 
@@ -436,7 +433,6 @@ transform: scale(1.1);
 .movies-area {
     font-size: 1rem;
     width: 88%;
-    padding: 1em;
     margin-top: 20px;
     background-color: "";
     display: flex;
@@ -607,7 +603,6 @@ transform: scale(1.1);
    justify-content: center;
    align-items: center;
    gap: 2em;
-   padding:1em 0;
    background-color: rgb(236, 236, 236);
 }
 
@@ -849,4 +844,90 @@ iframe {
  
 }
 
+@media (max-width: 430px ) and (min-height: 932px) {
 
+.buttn {
+    font-size: 1.2rem;
+    padding: 0.5em 1.1em;
+   
+}
+
+.FeturedMovie {
+    height: 80vh;
+} .opacity {
+    height: 80vh;
+}
+
+
+}
+
+
+@media (max-width: 768px ) and (min-height: 1024px) {
+    
+    .details-info {
+        font-size: 1.7rem;
+}  .details-topCasts {
+    font-size: 1.7rem;
+}.details-genre {
+    font-size: 1.5rem;
+}.footer {
+    height: 30svh;
+}.Footer {
+    height: 30svh;
+}
+.header-info-container {
+    font-size: 1.5rem;
+}.header {
+    font-size: 1.5rem;
+}.header nav {width: 50%}
+}
+
+
+@media (max-width: 1024px ) and (min-height: 1366px) {
+    .movieImg { display: none;}
+    .header-info-container {justify-content: center; width: 100%;}
+    .movie-info {width: 80%;}
+    .mobile_movieInfo {font-size: 2rem; width: 80%; text-align: center; }
+    .button {display: flex; justify-content: center;}
+    .swiper {font-size: 1.5rem;}
+    .slider-container { margin: 1em;}
+    .Header {font-size: 2rem;}
+    .details-info { font-size:2rem;}
+    .details-topCasts { font-size:1.5rem;}
+    .Footer {font-size: 1.1rem;}
+
+} 
+
+@media (max-width: 820px ) and (min-height: 1180px) {
+    .movieImg { display: none;}
+    .header-info-container {justify-content: center; width: 100%;}
+    .movie-info {width: 80%;}
+    .mobile_movieInfo {font-size: 2rem; width: 80%; text-align: center; }
+    .button {display: flex; justify-content: center;}
+    .swiper {font-size: 1.5rem;}
+    .slider-container { margin: 1em;}
+    .Header {font-size: 2rem;}
+    .details-info { font-size:2rem;}
+    .details-topCasts { font-size:1.5rem;}
+    .Footer {font-size: 1.1rem;}
+}
+
+@media (max-width: 280px ) and (min-height: 633px) {
+    .footer-content{width: 80%; display: flex; flex-wrap: wrap; justify-content: center;}
+    .footer {
+        height: 100svh;
+    }.Footer {
+        height: 100svh;
+    }.slider-container {
+        margin: 1em;
+    }.header-info {
+        font-size: 1rem;
+    }.buttn {
+        font-size: 1.0rem;
+        padding: 0.2em 0.8em;
+    }.details {
+        margin-top: 35%;
+        font-size: 0.8rem;
+    }.details-info { font-size:0.7rem;}
+    .details-topCasts { font-size:0.7rem;}
+}
