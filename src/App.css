@@ -883,7 +883,7 @@ iframe {
 }
 
 
-@media (max-width: 1024px ) and (min-height: 600px) {
+@media (max-width: 1024px ) and (min-height: 1366px) {
     .movieImg { display: none;}
     .header-info-container {justify-content: center; width: 100%;}
     .movie-info {width: 80%;}
