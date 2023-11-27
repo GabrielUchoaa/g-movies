@@ -343,7 +343,7 @@ transform: scale(1.1);
 
 .footer-content {
     margin: auto;
-    width: 30em;
+    width: 60%;
     padding: 4px;
     margin-top: 2em;
     display: flex;
